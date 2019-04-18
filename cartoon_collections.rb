@@ -6,8 +6,12 @@ def summon_captain_planet(calls)
   calls.collect { |call| "#{call.capitalize}!" }
 end
 
-def long_planeteer_calls()
-  
+def long_planeteer_calls(calls)
+  if calls.find { |call| call.length > 4 } != nil
+    true
+  else
+    false
+  end
 end
 
 def find_the_cheese# code an argument here
